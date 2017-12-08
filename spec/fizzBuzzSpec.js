@@ -24,5 +24,32 @@ describe("FizzBuzz Unit Tests", ()=>{
 		// expect takes 1 arg... something to evaluate
 		// we chain a method on expect.
 		expect(fizzBuzz()).toBeDefined();
+	});
+
+	it("Should be 1 for passing fizzBuzz 1", ()=>{
+		expect(fizzBuzz(1)).toBe(1);
 	})
+
+	it("Should be 2 for passing fizzBuzz 2", ()=>{
+		expect(fizzBuzz(2)).toBe(2);
+	})
+
+	it("Should be Fizz for passing fizzBuzz 3", ()=>{
+		expect(fizzBuzz(3)).toBe('Fizz');
+	})
+
+	it("Should be Buzz for passing fizzBuzz 5", ()=>{
+		expect(fizzBuzz(5)).toBe('Buzz');
+	})
+
+	it("Should be FizzBuzz for passing fizzBuzz 15", ()=>{
+		expect(fizzBuzz(15)).toBe('FizzBuzz');
+	})
+
+	var random = Math.floor(Math.random() * 1000 * 15);
+	it(`Should be a string, FizzBuzz for passing ${random}`,()=>{
+		expect(fizzBuzz(random)).toEqual("FizzBuzz");
+	})
+		
+
 })
